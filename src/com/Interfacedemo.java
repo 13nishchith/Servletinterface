@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Interfacedemo")
 public class Interfacedemo implements Servlet {
 	ServletConfig config=null;
-	public void init(ServletConfig config) throws ServletException {
+	public void init(ServletConfig config) {
 		this.config=config;
 		System.out.println("initialization complete");
 	}
@@ -63,13 +63,13 @@ public class Interfacedemo implements Servlet {
 	@Override
 	public ServletConfig getServletConfig() {
 		// TODO Auto-generated method stub
-		return null;
+		return config;
 	}
 
 	@Override
 	public String getServletInfo() {
 		// TODO Auto-generated method stub
-		return null;
+		return "This is simple servlet info";
 	}
 
 
